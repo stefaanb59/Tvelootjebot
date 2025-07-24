@@ -2,8 +2,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import json
 import openai
-
-openai.api_key = "YOUR_OPENAI_API_KEY_HERE"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class ActionHandleFietsherstelling(Action):
     def name(self):
