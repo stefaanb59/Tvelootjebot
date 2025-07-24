@@ -1,16 +1,22 @@
+# Gebruik het volledige Rasa-image met SDK en spacy
 FROM rasa/rasa:latest-full
 
+# Werkdirectory in container
 WORKDIR /app
 
+# Kopieer alle bestanden naar container
 COPY . /app
 
+# Installeer extra Python-pakketten (optioneel)
 USER root
-RUN pip install --no-cache-dir openai rasa-sdk
+RUN pip install --no-cache-dir rasa-sdk openai
 
+# Zorg dat start.sh uitvoerbaar is
 RUN chmod +x /app/start.sh
 
-USER 1001
-
+# Poorten voor Rasa server (5005) en action server (5055)
 EXPOSE 5005 5055
 
-CMD ["/app/start.sh"]
+# Voer startscript uit
+ENTRYPOINT ["/app/start.sh"]
+
