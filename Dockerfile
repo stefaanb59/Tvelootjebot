@@ -19,5 +19,4 @@ EXPOSE 5005 5055
 
 # Voer startscript uit
 ENTRYPOINT ["/app/start.sh"]
-
-rasa run --model /app/models/nlu-20250724-202724-brutal-gong.tar.gz
+CMD ["rasa", "run", "--enable-api", "--model", "models/nlu-20250724-202724-brutal-gong.tar.gz", "--cors", "*", "--port", "5005", "--host", "0.0.0.0"]
