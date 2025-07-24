@@ -1,8 +1,15 @@
 #!/bin/sh
-echo "Using PORT=${PORT}"
 
-# Start actions server op vaste poort 5055
-rasa run actions --port 5055 &
+# Warnings onderdrukken (optioneel)
+export SQLALCHEMY_SILENCE_UBER_WARNING=1
 
-# Start Rasa server op poort uit environment variable PORT of fallback 5005
-rasa run --enable-api --cors "*" --port ${PORT:-5005} --host 0.0.0.0
+# Start Rasa server in achtergrond
+rasa run \
+  --enable-api \
+  --cors "*" \
+  --port 5005 \
+  --debug &
+
+# Start Rasa action server op poort 5055
+rasa run actions \
+  --port 5055
