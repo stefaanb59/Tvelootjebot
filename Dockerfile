@@ -20,3 +20,4 @@ EXPOSE 5005 5055
 # Voer startscript uit
 ENTRYPOINT ["/app/start.sh"]
 
+rasa run --model /app/models/latest_model.tar.gz
