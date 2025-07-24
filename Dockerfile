@@ -1,4 +1,5 @@
-FROM rasa/rasa:3.6.16-full
+FROM rasa/rasa:latest-full
+
 
 # Create app directory
 WORKDIR /app
