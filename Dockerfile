@@ -20,4 +20,4 @@ EXPOSE 5005 5055
 # Voer startscript uit
 ENTRYPOINT ["/app/start.sh"]
 
-rasa run --model /app/models/latest_model.tar.gz
+rasa run --model /app/models/nlu-20250724-202724-brutal-gong.tar.gz
