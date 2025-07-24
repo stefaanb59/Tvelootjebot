@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tvelootjebot Chatbox</title>
-    <script src="https://cdn.jsdelivr.net/npm/@botfront/rasa-webchat@1.0.1/lib/index.min.js"></script>
-</head>
-<body>
-    <div id="webchat"></div>
+    <title>Tvelootjebot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.min.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Welkom bij Tvelootjebot 🚲</h1>
 
     <script>
       WebChat.default.init({
-        selector: "#webchat",
+        selector: "body",
         initPayload: "/greet",
-        customData: { language: "nl" },
-        socketUrl: "https://tvelootjebot.onrender.com",  // Pas aan naar jouw Rasa URL
+        customData: { language: "nl" }, // optioneel
+        socketUrl: "https://tvelootjebot.onrender.com",
         title: "Tvelootjebot",
-        subtitle: "Fietsherstellingen"
+        subtitle: "Stel hier je fietsherstel-vraag",
+        inputTextFieldHint: "Typ je vraag...",
+        showFullScreenButton: true,
+        hideWhenNotConnected: false,
+        openLauncherImage: 'https://cdn-icons-png.flaticon.com/512/833/833472.png',
+        closeLauncherImage: 'https://cdn-icons-png.flaticon.com/512/463/463612.png'
       });
     </script>
-</body>
+  </body>
 </html>
+
