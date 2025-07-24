@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tvelootjebot - Fietsherstel Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+  <h1 class="text-3xl font-bold mb-6">Tvelootjebot 🚲 - Vraag mij alles over fietsherstellingen!</h1>
+  <div id="webchat" class="w-full max-w-xl shadow-lg rounded-lg bg-white p-6"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@botfront/rasa-webchat@1.0.1/lib/index.min.js"></script>
+  <script>
+    WebChat.default({
+        initPayload: "/get_started",
+        customData: { language: "nl" },
+        socketUrl: "http://localhost:5005",
+        title: "Tvelootjebot",
+        inputTextFieldHint: "Stel je vraag over fietsherstellingen...",
+        embedded: true,
+        params: {
+            storage: "session"
+        }
+    }, document.querySelector('#webchat'));
+  </script>
+</body>
+</html>

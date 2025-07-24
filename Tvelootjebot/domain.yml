@@ -1,0 +1,15 @@
+intents:
+  - afstellen_achterderailleur
+  - afstellen_voorderailleur
+  - vervangen_crankas
+  - herstellen_lekke_band
+  - afstellen_vbrakes
+  - vervangen_ketting
+  - monteren_pedalen
+
+actions:
+  - action_handle_fietsherstelling
+
+responses:
+  utter_default:
+    - text: "Ik begrijp je niet helemaal, kan je het anders formuleren?"

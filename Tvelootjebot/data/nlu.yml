@@ -1,0 +1,45 @@
+version: "3.1"
+
+nlu:
+- intent: afstellen_achterderailleur
+  examples: |
+    - hoe stel ik de achterderailleur af?
+    - mijn ketting springt achteraan
+    - achterderailleur werkt niet goed
+    - derailleur achter regelen
+
+- intent: afstellen_voorderailleur
+  examples: |
+    - voorste derailleur werkt niet
+    - hoe regel ik mijn voorderailleur af?
+    - mijn ketting loopt aan vooraan
+
+- intent: vervangen_crankas
+  examples: |
+    - trapas vervangen
+    - crankas vervangen
+    - hoe vervang ik een bottom bracket?
+
+- intent: herstellen_lekke_band
+  examples: |
+    - mijn band is plat
+    - hoe repareer ik een lekke band?
+    - binnenband vervangen fiets
+
+- intent: afstellen_vbrakes
+  examples: |
+    - mijn remmen piepen
+    - v-brakes afstellen
+    - hoe stel ik mijn remmen goed in?
+
+- intent: vervangen_ketting
+  examples: |
+    - ketting vervangen
+    - nieuwe fietsketting monteren
+    - hoe vervang ik een ketting?
+
+- intent: monteren_pedalen
+  examples: |
+    - hoe monteer ik pedalen?
+    - pedalen monteren of vervangen
+    - nieuwe pedalen op fiets zetten
