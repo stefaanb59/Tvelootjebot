@@ -1,0 +1,19 @@
+version: "3.1"
+
+rules:
+- rule: Geef info over herstelling
+  steps:
+    - intent: afstellen_achterderailleur
+    - action: utter_afstellen_achterderailleur
+
+- rule: Geef info over v-brakes
+  steps:
+    - intent: afstellen_vbrakes
+    - action: utter_afstellen_vbrakes
+
+- rule: fallback
+  steps:
+    - intent: nlu_fallback
+    - action: utter_default
+
+

@@ -1,0 +1,53 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "afstellen_achterderailleur": 0,
+        "afstellen_vbrakes": 1,
+        "afstellen_voorderailleur": 2,
+        "back": 3,
+        "monteren_pedalen": 4,
+        "nlu_fallback": 5,
+        "out_of_scope": 6,
+        "restart": 7,
+        "session_start": 8,
+        "vervangen_cassette": 9,
+        "vervangen_crankas": 10,
+        "vervangen_freewheel": 11,
+        "vervangen_ketting": 12
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_afstellen_achterderailleur": 13,
+        "utter_afstellen_vbrakes": 14,
+        "utter_afstellen_voorderailleur": 15,
+        "utter_default": 16,
+        "utter_monteren_pedalen": 17,
+        "utter_vervangen_cassette": 18,
+        "utter_vervangen_crankas": 19,
+        "utter_vervangen_freewheel": 20,
+        "utter_vervangen_ketting": 21
+      },
+      "entities": {},
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

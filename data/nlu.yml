@@ -1,0 +1,53 @@
+version: "3.1"
+
+nlu:
+- intent: afstellen_achterderailleur
+  examples: |
+    - achterderailleur afstellen
+    - derailleur afregelen
+    - ketting springt over achteraan
+    - problemen met achterversnelling
+    - derailleur maakt lawaai
+
+- intent: afstellen_voorderailleur
+  examples: |
+    - voorderailleur afstellen
+    - schakelt moeilijk vooraan
+    - ketting loopt eraf vooraan
+
+- intent: afstellen_vbrakes
+  examples: |
+    - v brakes afstellen
+    - remmen afregelen
+    - mijn remmen schuren
+
+- intent: vervangen_ketting
+  examples: |
+    - ketting vervangen
+    - kapotte fietsketting
+    - nieuwe ketting leggen
+
+- intent: vervangen_crankas
+  examples: |
+    - crankas vervangen
+    - speling in trapas
+    - krakende trapas
+
+- intent: monteren_pedalen
+  examples: |
+    - pedalen monteren
+    - nieuwe pedalen op fiets zetten
+    - pedaal vastmaken
+
+- intent: vervangen_cassette
+  examples: |
+    - cassette vervangen
+    - achtertandwielen vervangen
+    - versnellingsgroep vernieuwen
+
+- intent: vervangen_freewheel
+  examples: |
+    - freewheel vervangen
+    - ratelmechanisme kapot
+    - achterwiel vrijloop defect
+

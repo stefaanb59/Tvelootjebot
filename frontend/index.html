@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tvelootjebot Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+    #chatlog {
+      border: 1px solid #ccc;
+      padding: 10px;
+      height: 400px;
+      overflow-y: scroll;
+      background: #f9f9f9;
+      margin-bottom: 10px;
+    }
+    .user-msg {
+      text-align: right;
+      color: #007bff;
+      margin: 5px 0;
+    }
+    .bot-msg {
+      text-align: left;
+      color: #333;
+      margin: 5px 0;
+    }
+    #input-area {
+      display: flex;
+    }
+    #input-area input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #input-area button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welkom bij Tvelootjebot</h1>
+  <div id="chatlog"></div>
+
+  <div id="input-area">
+    <input id="input" type="text" placeholder="Typ je vraag..." autocomplete="off" />
+    <button onclick="sendMessage()">Verstuur</button>
+  </div>
+
+  <script>
+    const chatlog = document.getElementById('chatlog');
+    const input = document.getElementById('input');
+
+    async function sendMessage() {
+      const message = input.value.trim();
+      if (!message) return;
+      
+      // Toon gebruikersbericht
+      addMessage(message, 'user-msg');
+      input.value = '';
+      scrollChatToBottom();
+
+      // Verstuur naar Rasa REST API
+      try {
+        const response = await fetch('https://tvelootjebot.onrender.com/webhooks/rest/webhook', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ message })
+        });
+        const data = await response.json();
+
+        if (data.length === 0) {
+          addMessage("Sorry, ik begrijp het niet.", 'bot-msg');
+        } else {
+          data.forEach(reply => {
+            if (reply.text) addMessage(reply.text, 'bot-msg');
+          });
+        }
+        scrollChatToBottom();
+      } catch (error) {
+        addMessage("Er is een fout opgetreden, probeer later opnieuw.", 'bot-msg');
+      }
+    }
+
+    function addMessage(text, className) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = className;
+      msgDiv.textContent = text;
+      chatlog.appendChild(msgDiv);
+    }
+
+    function scrollChatToBottom() {
+      chatlog.scrollTop = chatlog.scrollHeight;
+    }
+
+    // Enter toets verstuurt bericht
+    input.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+version: "3.1"
+
+intents:
+  - afstellen_achterderailleur
+  - afstellen_voorderailleur
+  - afstellen_vbrakes
+  - vervangen_ketting
+  - vervangen_crankas
+  - monteren_pedalen
+  - vervangen_cassette
+  - vervangen_freewheel
+  - nlu_fallback
+
+responses:
+  utter_afstellen_achterderailleur:
+    - text: "Je kunt de achterderailleur afstellen door de H- en L-schroeven bij te regelen. Kijk ook of de derailleurpad recht is."
+
+  utter_afstellen_voorderailleur:
+    - text: "Om de voorderailleur af te stellen controleer je de hoogte en de afstand tot de ketting, en gebruik je de H- en L-schroeven."
+
+  utter_afstellen_vbrakes:
+    - text: "Stel de v-brakes af door de stelschroeven te draaien en te controleren of de remmen symmetrisch zijn."
+
+  utter_vervangen_ketting:
+    - text: "Gebruik een kettingpons om de oude ketting te verwijderen, en bevestig de nieuwe ketting met een missing link."
+
+  utter_vervangen_crankas:
+    - text: "Verwijder de crankarmen met een cranktrekker en gebruik daarna een trapsleutel om de crankas los te maken."
+
+  utter_monteren_pedalen:
+    - text: "Draai de pedalen in de juiste richting (let op: linker pedaal = linkse draad!). Smeer vet op de schroefdraad."
+
+  utter_vervangen_cassette:
+    - text: "Gebruik een kettingzweep en cassette-afnemer om de cassette te verwijderen en vervang ze door een nieuwe."
+
+  utter_vervangen_freewheel:
+    - text: "Freewheel losmaken met een passende afnemer, vervang hem en smeer de draad indien nodig."
+
+  utter_default:
+    - text: "Sorry, dat begrijp ik niet. Probeer het opnieuw of stel een andere fietsherstelling voor."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

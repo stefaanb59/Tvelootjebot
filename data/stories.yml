@@ -1,0 +1,7 @@
+version: "3.1"
+
+stories:
+- story: Achterderailleur afstellen
+  steps:
+    - intent: afstellen_achterderailleur
+    - action: utter_afstellen_achterderailleur
