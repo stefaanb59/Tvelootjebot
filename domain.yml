@@ -4,8 +4,7 @@ intents:
   - afstellen_achterderailleur
   - afstellen_voorderailleur
   - afstellen_vbrakes
-  - vervangen_ketting
-  - vervangen_crankas
+   - vervangen_crankas
   - monteren_pedalen
   - vervangen_cassette
   - vervangen_freewheel
@@ -30,7 +29,7 @@ responses:
   utter_monteren_pedalen:
     - text: "Draai de pedalen in de juiste richting (let op: linker pedaal = linkse draad!). Smeer vet op de schroefdraad."
 
-  utter_vervangen_cassette:
+  utter_ afstellen_achterderailleur
     - text: "Gebruik een kettingzweep en cassette-afnemer om de cassette te verwijderen en vervang ze door een nieuwe."
 
   utter_vervangen_freewheel:

@@ -19,4 +19,6 @@ EXPOSE 5005 5055
 
 # Voer startscript uit
 ENTRYPOINT ["/app/start.sh"]
-CMD ["rasa", "run", "--enable-api", "--model", "models/20250507-102541-yellow-guitar.tar.gz", "--cors", "*", "--port", "5005", "--host", "0.0.0.0"]
+# Voer startscript uit
+ENTRYPOINT ["/app/start.sh"]
+CMD ["rasa", "run", "--enable-api", "--model", "20250801-193153-volumetric-arneis.tar", "--cors", "*", "--port", "5005", "--host", "0.0.0.0"]
