@@ -1,5 +1,6 @@
 # Gebruik het volledige Rasa-image met SDK en spacy
 FROM rasa/rasa:latest-full
+FROM python:3.10-slim
 
 # Werkdirectory in container
 WORKDIR /app

@@ -1,2 +1,3 @@
 action_endpoint:
-   url: "https://fietskeukenbot-core.onrender.com"
+    url: "http://localhost:5055/webhook"
+
