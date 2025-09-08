@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: Fietskeukenbot
+    env: python
+    pythonVersion: "3.10.12"
+    buildCommand: "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt"
+    startCommand: "rasa run --enable-api --cors '*'"
